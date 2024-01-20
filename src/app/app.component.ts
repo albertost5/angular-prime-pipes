@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {PrimeNGConfig} from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: []
 })
 export class AppComponent {
-  title = 'angular-prime-pipes';
+  constructor(private readonly primeNgConfig: PrimeNGConfig) {
+    this.primeNgConfig.ripple = true;
+  }
 }
