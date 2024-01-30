@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {registerLocaleData} from '@angular/common';
+import {ToggleCasePipe} from './products/pipes/toggle-case.pipe';
 
 // Locale configuration
 registerLocaleData(localesES);
@@ -23,7 +24,7 @@ registerLocaleData(localesFR);
     SharedModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'es-ES' }
+    {provide: LOCALE_ID, useValue: 'es-ES'}
   ],
   bootstrap: [AppComponent]
 })
