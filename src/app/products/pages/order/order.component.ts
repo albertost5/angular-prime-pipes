@@ -30,8 +30,13 @@ export class OrderComponent {
       color: Color.Red
     }
   ];
+  public orderByHeroKey: keyof Heroe = 'canFly';
 
   toggleIsUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  changeOrderBy(heroKey: keyof Heroe) {
+    this.orderByHeroKey = heroKey
   }
 }
